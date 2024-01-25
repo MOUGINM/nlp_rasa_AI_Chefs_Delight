@@ -1,0 +1,14 @@
+stories:
+- story: commande complète
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: order_food
+  - action: validate_order
+  - action: utter_ask_more
+  - intent: order_drink
+  - action: validate_order
+  - action: calculate_total
+  - action: utter_order_summary
+  - intent: confirm_order
+  - action: utter_thank_you

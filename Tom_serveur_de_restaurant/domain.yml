@@ -1,0 +1,48 @@
+intents:
+- greet
+- order_food
+- order_drink
+- confirm_order
+- deny_order
+
+entities:
+- food
+- drink
+
+slots:
+  food:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: food
+  drink:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: drink
+  total_price:
+    type: float
+    initial_value: 0.0
+    mappings:
+    - type: custom
+
+
+responses:
+  utter_greet:
+  - text: "Bonjour, bienvenue dans notre restaurant! Je suis Tom, votre serveur virtuel. Souhaitez-vous voir le menu?"
+  
+  utter_show_menu:
+  - text: "Voici notre menu :\nPlats: Pizza (12€), Burger (8€), Lasagne (6€)\nBoissons: Eau (2€), Café (2€), Coca (3€)\nQue souhaitez-vous commander?"
+  
+  utter_ask_more:
+  - text: "Voulez-vous ajouter autre chose à votre commande ?"
+  
+  utter_order_summary:
+  - text: "Parfait, voici le résumé de votre commande : {food} et {drink}. Le total à payer est de {total_price} euros. Est-ce correct ?"
+  
+  utter_thank_you:
+  - text: "Merci pour votre commande. Votre repas sera prêt bientôt. Bon appétit !"
+
+actions:
+- validate_order
+- calculate_total

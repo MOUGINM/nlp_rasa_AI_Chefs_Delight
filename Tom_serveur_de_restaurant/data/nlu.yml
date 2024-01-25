@@ -1,0 +1,30 @@
+nlu:
+- intent: greet
+  examples: |
+    - Bonjour
+    - Salut
+    - Coucou
+
+- intent: order_food
+  examples: |
+    - Je voudrais une pizza
+    - Un burger, s'il vous plaît
+    - Des lasagnes pour moi
+
+- intent: order_drink
+  examples: |
+    - Un coca, s'il vous plaît
+    - Je prendrais un café
+    - Une eau pour moi
+
+- intent: confirm_order
+  examples: |
+    - Oui, c'est correct
+    - Parfait
+    - C'est bien ça
+
+- intent: deny_order
+  examples: |
+    - Non, ce n'est pas correct
+    - Il y a une erreur
+    - Ce n'est pas ce que j'ai commandé
